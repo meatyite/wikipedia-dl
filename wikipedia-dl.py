@@ -4,8 +4,9 @@ import requests
 from urllib.parse import unquote
 from sys import argv
 
+user_agent = 'wikipedia-dl github.com/sl4vkek/wikipedia-dl'
 session = requests.Session()
-session.headers = {'User-Agent': 'wikipedia-dl github.com/sl4vkek/wikipedia-dl'}
+session.headers = {'User-Agent': user_agent}
 
 
 def download_pdf(url):
@@ -32,6 +33,20 @@ def download_pdf(url):
 
 if __name__ == '__main__':
     if len(argv) >= 2:
+        if argv[1] == "-v":
+            print("""wikipedia-dl by sl4vkek
+User agent: wikipedia-dl github.com/sl4vkek/wikipedia-dl
+Licensed under the Unlicense, see unlicense.org for more information.
+NO COPYRIGHT intended.""")
+            exit()
+        if argv[1] == '-h':
+            print("""
+Usage: wikipedia-dl [URL] OR wikipedia-dl [OPTION]
+Options:
+-h     -  Displays help information and exits
+-v     -  Displays version information and exits
+""")
+            exit()
         download_pdf(argv[1])
     else:
         print("Usage: wikipedia-dl [url]")
