@@ -32,6 +32,6 @@ def download_pdf(url):
 
 if __name__ == '__main__':
     if len(argv) >= 1:
-        download_pdf(argv[1])
+        download_pdf(argv[2])
     else:
         print("Usage: wikipedia-dl [url]")
