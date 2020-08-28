@@ -5,7 +5,7 @@ from urllib.parse import unquote
 from sys import argv
 
 session = requests.Session()
-session.headers = {'User-Agent': 'wikipedia-dl test bot'}
+session.headers = {'User-Agent': 'wikipedia-dl github.com/sl4vkek/wikipedia-dl'}
 
 
 def download_pdf(url):
@@ -33,3 +33,5 @@ def download_pdf(url):
 if __name__ == '__main__':
     if len(argv) >= 1:
         download_pdf(argv[1])
+    else:
+        print("Usage: wikipedia-dl [url]")
