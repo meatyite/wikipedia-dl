@@ -4,7 +4,7 @@ import requests
 from urllib.parse import unquote
 from sys import argv
 
-user_agent = 'wikipedia-dl github.com/sl4vkek/wikipedia-dl'
+user_agent = 'wikipedia-dl PDF downloader bot github.com/sl4vkek/wikipedia-dl'
 session = requests.Session()
 session.headers = {'User-Agent': user_agent}
 
@@ -35,9 +35,9 @@ if __name__ == '__main__':
     if len(argv) >= 2:
         if argv[1] == "-v":
             print("""wikipedia-dl by sl4vkek
-User agent: wikipedia-dl github.com/sl4vkek/wikipedia-dl
+User agent: {}
 Licensed under the Unlicense, see unlicense.org for more information.
-NO COPYRIGHT intended.""")
+NO COPYRIGHT intended.""".format(user_agent))
             exit()
         if argv[1] == '-h':
             print("""
