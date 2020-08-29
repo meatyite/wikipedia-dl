@@ -5,3 +5,6 @@ CLI Wikipedia PDF downloader. requires requests and python3
 `sudo chmod a+rx /usr/local/bin/wikipedia-dl`
 ## Usage
 `wikipedia-dl [wikipedia article url]`<br/>
+## License
+Licensed under the Unlicense (see LICENSE file).<br/>
+Note that you do not need my permission to include this in any program, package manager, app, etc.
